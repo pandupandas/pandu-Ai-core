@@ -53,7 +53,7 @@ This means developers can plug into PanduCore, PanduVoice, PanduCanvas, or Pandu
 - Memory persistence for context  
 - Lightweight reasoning pipeline  
 
-```mermaid
+```
 flowchart TD
   U[User Input] --> C[PanduCore]
   C -->|Reasoning| M[Memory Store]
