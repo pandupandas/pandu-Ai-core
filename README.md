@@ -3,9 +3,6 @@
 **PanduAI** is the modular AI framework powering **PanduPandas**.  
 It blends **real-time conversation**, **neural voice**, and **generative art** into one cohesive stack.  
 
-> ⚡️ This repo is a **documentation + developer showcase**.  
-> It is not the full production source code — but it gives you a taste of the **PanduAI stack**.
-
 ---
 
 ## ✨ Core Modules
@@ -41,3 +38,51 @@ async function main() {
 }
 
 main();
+
+# 🏗  Architecture
+
+PanduAI is designed as a **modular AI framework** — every layer is independent but composable.  
+This means developers can plug into PanduCore, PanduVoice, PanduCanvas, or PanduOS without needing the full stack.
+
+---
+
+## Core Modules
+
+### 🐼 PanduCore
+- Conversational engine with personality profiles  
+- Memory persistence for context  
+- Lightweight reasoning pipeline  
+
+```mermaid
+flowchart TD
+  U[User Input] --> C[PanduCore]
+  C -->|Reasoning| M[Memory Store]
+  C --> R[Assistant Reply]
+
+### 🎙 PanduVoice
+- Real-time TTS (text → voice) & ASR (voice → text)
+- Audio hooks for visualization (mouth-sync, meters)
+- Ultra-low latency voice pipeline
+
+```mermaid
+flowchart TD
+  T[Text Input] --> V[PanduVoice Engine]
+  V -->|TTS| A[Audio Out]
+  A -->|Visualization| M[Mouth Sync]
+
+### 🖥 PanduOS
+- The orchestrator connecting all modules
+- Routes user input → Core → Voice → Canvas
+- Modular plugin system for future AI tools
+
+```mermaid
+flowchart TD
+  U[User] --> OS[PanduOS]
+  OS --> Core[PanduCore]
+  OS --> Voice[PanduVoice]
+  OS --> Canvas[PanduCanvas]
+  OS --> Reply[Unified Output]
+
+
+
+
