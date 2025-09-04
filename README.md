@@ -53,7 +53,7 @@ This means developers can plug into PanduCore, PanduVoice, PanduCanvas, or Pandu
 - Memory persistence for context  
 - Lightweight reasoning pipeline  
 
-```mermaid
+```
 flowchart TD
   U[User Input] --> C[PanduCore]
   C -->|Reasoning| M[Memory Store]
@@ -64,7 +64,6 @@ flowchart TD
 - Audio hooks for visualization (mouth-sync, meters)
 - Ultra-low latency voice pipeline
 
-```mermaid
 flowchart TD
   T[Text Input] --> V[PanduVoice Engine]
   V -->|TTS| A[Audio Out]
@@ -75,7 +74,6 @@ flowchart TD
 - Routes user input → Core → Voice → Canvas
 - Modular plugin system for future AI tools
 
-```mermaid
 flowchart TD
   U[User] --> OS[PanduOS]
   OS --> Core[PanduCore]
