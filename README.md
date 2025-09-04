@@ -48,7 +48,7 @@ This means developers can plug into PanduCore, PanduVoice, PanduCanvas, or Pandu
 
 ## Core Modules
 
-### 🐼 PanduCore
+### PanduCore
 - Conversational engine with personality profiles  
 - Memory persistence for context  
 - Lightweight reasoning pipeline  
@@ -59,7 +59,7 @@ flowchart TD
   C -->|Reasoning| M[Memory Store]
   C --> R[Assistant Reply]
 
-### 🎙 PanduVoice
+### PanduVoice
 - Real-time TTS (text → voice) & ASR (voice → text)
 - Audio hooks for visualization (mouth-sync, meters)
 - Ultra-low latency voice pipeline
@@ -69,7 +69,7 @@ flowchart TD
   V -->|TTS| A[Audio Out]
   A -->|Visualization| M[Mouth Sync]
 
-### 🖥 PanduOS
+### PanduOS
 - The orchestrator connecting all modules
 - Routes user input → Core → Voice → Canvas
 - Modular plugin system for future AI tools
