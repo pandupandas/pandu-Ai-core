@@ -1,4 +1,3 @@
-// panduai.js
 // 🐼 PanduAI — Unified SDK (Docs / Reference Only)
 // Version: v1.0.0
 
