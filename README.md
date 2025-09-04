@@ -17,27 +17,18 @@ It blends **real-time conversation**, **neural voice**, and **generative art** i
 ## 🚀 Quick Example
 
 ```js
-import { PanduCore, PanduVoice, PanduCanvas, PanduOS } from "panduai";
+import PanduAI from "./panduai.js";
 
-// bootstrap PanduOS
-const pandu = new PanduOS({
-  core: new PanduCore(),
-  voice: new PanduVoice(),
-  canvas: new PanduCanvas(),
-});
+const core = PanduAI.PanduCore.init({ personality: "Cheerful" });
+const chat = PanduAI.PanduCore.chat("Hello Pandu!", core.memory);
+console.log(chat.reply);
 
-// example loop
-async function main() {
-  await pandu.voice.say("Hello, I am Pandu, your AI friend 🐼✨");
+await PanduAI.PanduVoice.speak("Welcome to PanduAI!");
+const img = await PanduAI.PanduCanvas.generate("panda in bamboo forest");
+console.log("Generated image:", img);
 
-  const reply = await pandu.core.chat("What do you think about Solana?");
-  console.log("Pandu:", reply);
-
-  const img = await pandu.canvas.generate("A panda trading crypto on Solana");
-  console.log("Generated artwork at:", img.path);
-}
-
-main();
+const full = await PanduAI.PanduOS.multiModal("Tell me a joke", "panda meme");
+console.log(full);
 ```
 # 🏗  Architecture
 
