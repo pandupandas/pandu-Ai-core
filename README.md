@@ -19,11 +19,15 @@ It blends **real-time conversation**, **neural voice**, and **generative art** i
 ```js
 import PanduAI from "./panduai.js";
 
+PanduAI.PanduConfig.apiKey = "pandu_live_key_xxx_abc123";
+
 const core = PanduAI.PanduCore.init({ personality: "Cheerful" });
+
 const chat = PanduAI.PanduCore.chat("Hello Pandu!", core.memory);
 console.log(chat.reply);
 
 await PanduAI.PanduVoice.speak("Welcome to PanduAI!");
+
 const img = await PanduAI.PanduCanvas.generate("panda in bamboo forest");
 console.log("Generated image:", img);
 
