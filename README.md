@@ -38,7 +38,7 @@ async function main() {
 }
 
 main();
-
+```
 # 🏗  Architecture
 
 PanduAI is designed as a **modular AI framework** — every layer is independent but composable.  
@@ -82,7 +82,3 @@ flowchart TD
   OS --> Voice[PanduVoice]
   OS --> Canvas[PanduCanvas]
   OS --> Reply[Unified Output]
-
-
-
-
